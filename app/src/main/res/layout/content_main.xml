@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="me.chon.flowlayout.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="分散对齐"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <me.chon.flowlayout.view.FlowLayout
+            android:id="@+id/flowlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:padding="8dp"/>
+
+        <TextView
+            android:text="分散对齐  最后行居左"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <me.chon.flowlayout.view.FlowLayout
+            android:id="@+id/flowlayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:padding="8dp"
+            app:lastLineFill="false"/>
+
+
+        <TextView
+            android:text="右对齐"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <me.chon.flowlayout.view.FlowLayout
+            android:id="@+id/flowlayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:padding="8dp"
+            app:alignmentType="right"
+            app:distributed="false"/>
+
+
+        <TextView
+            android:text="居中对齐"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <me.chon.flowlayout.view.FlowLayout
+            android:id="@+id/flowlayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:padding="8dp"
+            app:alignmentType="center"
+            app:distributed="false"/>
+
+        <TextView
+            android:text="左对齐"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <me.chon.flowlayout.view.FlowLayout
+            android:id="@+id/flowlayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:padding="8dp"
+            app:alignmentType="left"
+            app:distributed="false"/>
+
+    </LinearLayout>
+</ScrollView>
