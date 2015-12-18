@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,6 +108,8 @@ public class FlowLayout extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        Toast.makeText(getContext(),"onLayout",Toast.LENGTH_SHORT).show();
+
         mAllViews.clear();
         mLineHeight.clear();
         mLineWidth.clear();
@@ -228,14 +231,22 @@ public class FlowLayout extends ViewGroup {
 
     /**
      * 设置是否分散对齐
-     * @param distributed
      */
-    public void setDistributed(boolean distributed) {
-        if (this.isDistributed != distributed){
-            this.isDistributed = distributed;
-            alignmentType = LEFT;
-            requestLayout();
-        }
+    public void setDistributedAndLastLineFill() {
+        this.isDistributed = true;
+        alignmentType = LEFT;
+        lastLineFill = true;
+        requestLayout();
+    }
+
+    /**
+     * 设置分散对齐且最后行不填充
+     */
+    public void setDistributedAndLastLineNotFill() {
+        this.isDistributed = true;
+        alignmentType = LEFT;
+        lastLineFill = false;
+        requestLayout();
     }
 
 

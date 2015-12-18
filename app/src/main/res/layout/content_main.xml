@@ -10,88 +10,69 @@
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/ll_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:text="分散对齐"
-            android:padding="8dp"
-            android:textSize="16sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <me.chon.flowlayout.view.FlowLayout
-            android:id="@+id/flowlayout1"
+            android:id="@+id/flowlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:distributed="false"
+            app:alignmentType="left"
             android:background="@android:color/background_light"
             android:padding="8dp"/>
 
-        <TextView
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="分散对齐"
+            android:textSize="16sp"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
             android:text="分散对齐  最后行居左"
-            android:padding="8dp"
-            android:textSize="16sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:textSize="16sp"/>
 
-        <me.chon.flowlayout.view.FlowLayout
-            android:id="@+id/flowlayout2"
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/background_light"
+            android:gravity="center"
             android:padding="8dp"
-            app:lastLineFill="false"/>
-
-
-        <TextView
             android:text="右对齐"
-            android:padding="8dp"
-            android:textSize="16sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:textSize="16sp"/>
 
-        <me.chon.flowlayout.view.FlowLayout
-            android:id="@+id/flowlayout3"
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/background_light"
+            android:gravity="center"
             android:padding="8dp"
-            app:alignmentType="right"
-            app:distributed="false"/>
-
-
-        <TextView
             android:text="居中对齐"
-            android:padding="8dp"
-            android:textSize="16sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:textSize="16sp"/>
 
-        <me.chon.flowlayout.view.FlowLayout
-            android:id="@+id/flowlayout4"
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/background_light"
+            android:gravity="center"
             android:padding="8dp"
-            app:alignmentType="center"
-            app:distributed="false"/>
-
-        <TextView
             android:text="左对齐"
-            android:padding="8dp"
-            android:textSize="16sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <me.chon.flowlayout.view.FlowLayout
-            android:id="@+id/flowlayout5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/background_light"
-            android:padding="8dp"
-            app:alignmentType="left"
-            app:distributed="false"/>
+            android:textSize="16sp"/>
 
     </LinearLayout>
 </ScrollView>
