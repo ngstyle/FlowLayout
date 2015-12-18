@@ -108,8 +108,6 @@ public class FlowLayout extends ViewGroup {
 
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        Toast.makeText(getContext(),"onLayout",Toast.LENGTH_SHORT).show();
-
         mAllViews.clear();
         mLineHeight.clear();
         mLineWidth.clear();
